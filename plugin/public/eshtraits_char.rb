@@ -5,6 +5,6 @@ module AresMUSH
       attribute :advantages
       attribute :flaws
 	  attribute :personality
-	  attribute :flaws
+	  attribute :timeline
     end
   end
