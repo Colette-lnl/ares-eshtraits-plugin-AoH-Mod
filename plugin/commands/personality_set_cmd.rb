@@ -29,7 +29,7 @@ module AresMUSH
                         model.update(personality: self.personality)
                         client.emit_success t('eshtraits.personality_set')
                     elsif (Chargen.can_approve?(enactor))
-                        model.update(personality: self.perstonality)
+                        model.update(personality: self.personality)
                         client.emit_success t('eshtraits.personality_set')
                     else
                         client.emit_failure t('dispatcher.not_allowed')
