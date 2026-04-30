@@ -49,6 +49,24 @@ module AresMUSH
                 else 
                     return FlawsCmd
                 end
+			when "personality"
+                case cmd.switch
+                when "set"
+                    return SetPersonalityCmd
+                when "clear"
+                    return ClearPersonalityCmd
+                else 
+                    return PersonalityCmd
+                end
+			when "timeline"
+                case cmd.switch
+                when "set"
+                    return SetTimelineCmd
+                when "clear"
+                    return ClearTimelineCmd
+                else 
+                    return TimelineCmd
+                end	
             when "sheet"
                 return SheetCmd
             end

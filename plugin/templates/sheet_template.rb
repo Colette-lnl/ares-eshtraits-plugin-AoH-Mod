@@ -29,7 +29,15 @@ module AresMUSH
 		def flaws
 			@char.flaws
 		end
-
+		
+		def personality
+			@char.personality
+		end
+		
+		def timeline
+			@char.timeline
+		end
+		
 		def section_line(title)
 			@client.screen_reader ? title : line_with_text(title)
 		end

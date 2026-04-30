@@ -1,3 +1,8 @@
+# ESH traits AoH fork for Ares
+
+This is simply a modified version of Clockwork's ESH traits plugin that adds two new fields to the sheet: Personality and Timeline. That's it. It's the same in every other way, and Clockwork did the real work and deserves all the credit. Original ESH traits readme below, installation etc. is all exactly the same.
+
+
 # ESH Traits Plugin for Ares
 
 ## Credits

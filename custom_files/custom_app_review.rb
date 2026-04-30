@@ -54,8 +54,24 @@ module AresMUSH
       else
         flawsmsg = t('chargen.oops_missing', :missing => "Flaws")
       end
+	  
+	  personality = char.personality
 
-      return (Chargen.format_review_status "\nChecking Powers.", powersmsg) + (Chargen.format_review_status "\nChecking Skills.", skillsmsg) + (Chargen.format_review_status "\nChecking Advantages.", advmsg) + (Chargen.format_review_status "\nChecking Flaws.", flawsmsg)
+      if (personality.length > 0)
+        persmsg = t('chargen.ok')
+      else
+        persmsg = t('chargen.oops_missing', :missing => "Personality")
+      end
+	  
+	  timeline = char.timeline
+
+      if (timeline.length > 0)
+        timelmsg = t('chargen.ok')
+      else
+        timelmsg = t('chargen.oops_missing', :missing => "Timeline")
+      end
+	  
+      return (Chargen.format_review_status "\nChecking Powers.", powersmsg) + (Chargen.format_review_status "\nChecking Skills.", skillsmsg) + (Chargen.format_review_status "\nChecking Advantages.", advmsg) + (Chargen.format_review_status "\nChecking Flaws.", flawsmsg) + Chargen.format_review_status "\nChecking Personality.", persmsg) + Chargen.format_review_status "\nChecking Timeline.", timelmsg)
 
     end
   end

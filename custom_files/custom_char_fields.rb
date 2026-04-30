@@ -6,7 +6,7 @@ module AresMUSH
       # Note: Viewer may be nil if someone's looking at the character page without being logged in
       # Example: return { goals: Website.format_markdown_for_html(char.goals) }
       def self.get_fields_for_viewing(char, viewer)
-        return { powers: Website.format_markdown_for_html(char.powers), skills: Website.format_markdown_for_html(char.skills), advantages: Website.format_markdown_for_html(char.advantages), flaws: Website.format_markdown_for_html(char.flaws)}
+        return { powers: Website.format_markdown_for_html(char.powers), skills: Website.format_markdown_for_html(char.skills), advantages: Website.format_markdown_for_html(char.advantages), flaws: Website.format_markdown_for_html(char.flaws), personality: Website.format_markdown_for_html(char.personality), timeline: Website.format_markdown_for_html(char.timeline)}
       end
     
       # Return a hash of custom fields formatted for editing in the profile editor
@@ -18,7 +18,7 @@ module AresMUSH
       # Return a hash of custom fields formatted for editing in chargen
       # Example: return { goals: Website.format_input_for_html(char.goals) }
       def self.get_fields_for_chargen(char)
-        return { powers: Website.format_input_for_html(char.powers), skills: Website.format_input_for_html(char.skills), advantages: Website.format_input_for_html(char.advantages), flaws: Website.format_input_for_html(char.flaws)}
+        return { powers: Website.format_input_for_html(char.powers), skills: Website.format_input_for_html(char.skills), advantages: Website.format_input_for_html(char.advantages), flaws: Website.format_input_for_html(char.flaws), personality: Website.format_markdown_for_html(char.personality), timeline: Website.format_markdown_for_html(char.timeline)}
       end
       
       # Custom fields will be in char_data[:custom]
@@ -35,6 +35,8 @@ module AresMUSH
         char.update(skills: chargen_data['custom']['skills'])
         char.update(advantages: chargen_data['custom']['advantages'])
         char.update(flaws: chargen_data['custom']['flaws'])
+		char.update(personality: chargen_data['custom']['personality'])
+		char.update(timeline: chargen_data['custom']['timeline'])
         return []
       end
       
