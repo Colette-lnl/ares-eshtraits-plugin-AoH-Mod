@@ -25,7 +25,7 @@ module AresMUSH
 
       powers = char.powers
 
-      if (powers.length > 0)
+      if (powers.to-s.length > 0)
         powersmsg = t('chargen.ok')
       else
         powersmsg = t('chargen.oops_missing', :missing => "Powers")
@@ -33,7 +33,7 @@ module AresMUSH
 
       skills = char.skills
 
-      if (skills.length > 0)
+      if (skills.to_s.length > 0)
         skillsmsg = t('chargen.ok')
       else
         skillsmsg = t('chargen.oops_missing', :missing => "Skills")
@@ -41,7 +41,7 @@ module AresMUSH
 
       advantages = char.advantages 
 
-      if (advantages.length > 0)
+      if (advantages.to_s.length > 0)
         advmsg = t('chargen.ok')
       else
         advmsg = t('chargen.oops_missing', :missing => "Advantages")
@@ -49,7 +49,7 @@ module AresMUSH
 
       flaws = char.flaws
 
-      if (flaws.length > 0)
+      if (flaws.to_s.length > 0)
         flawsmsg = t('chargen.ok')
       else
         flawsmsg = t('chargen.oops_missing', :missing => "Flaws")
@@ -57,7 +57,7 @@ module AresMUSH
 	  
 	  personality = char.personality
 
-      if (personality.length > 0)
+      if (personality.to_s.length > 0)
         persmsg = t('chargen.ok')
       else
         persmsg = t('chargen.oops_missing', :missing => "Personality")
@@ -65,7 +65,7 @@ module AresMUSH
 	  
 	  timeline = char.timeline
 
-      if (timeline.length > 0)
+      if (timeline.to_s.length > 0)
         timelmsg = t('chargen.ok')
       else
         timelmsg = t('chargen.oops_missing', :missing => "Timeline")
