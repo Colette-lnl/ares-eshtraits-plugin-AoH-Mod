@@ -71,7 +71,7 @@ module AresMUSH
         timelmsg = t('chargen.oops_missing', :missing => "Timeline")
       end
 	  
-      return (Chargen.format_review_status "\nChecking Powers.", powersmsg) + (Chargen.format_review_status "\nChecking Skills.", skillsmsg) + (Chargen.format_review_status "\nChecking Advantages.", advmsg) + (Chargen.format_review_status "\nChecking Flaws.", flawsmsg) + Chargen.format_review_status "\nChecking Personality.", persmsg) + Chargen.format_review_status "\nChecking Timeline.", timelmsg)
+      return (Chargen.format_review_status "\nChecking Powers.", powersmsg) + (Chargen.format_review_status "\nChecking Skills.", skillsmsg) + (Chargen.format_review_status "\nChecking Advantages.", advmsg) + (Chargen.format_review_status "\nChecking Flaws.", flawsmsg) + (Chargen.format_review_status "\nChecking Personality.", persmsg) + (Chargen.format_review_status "\nChecking Timeline.", timelmsg)
 
     end
   end
