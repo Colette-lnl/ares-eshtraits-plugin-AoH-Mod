@@ -18,7 +18,7 @@ module AresMUSH
       # Return a hash of custom fields formatted for editing in chargen
       # Example: return { goals: Website.format_input_for_html(char.goals) }
       def self.get_fields_for_chargen(char)
-        return { powers: Website.format_input_for_html(char.powers), skills: Website.format_input_for_html(char.skills), advantages: Website.format_input_for_html(char.advantages), flaws: Website.format_input_for_html(char.flaws), personality: Website.format_markdown_for_html(char.personality), timeline: Website.format_markdown_for_html(char.timeline)}
+        return { powers: Website.format_input_for_html(char.powers), skills: Website.format_input_for_html(char.skills), advantages: Website.format_input_for_html(char.advantages), flaws: Website.format_input_for_html(char.flaws), personality: Website.format_input_for_html(char.personality), timeline: Website.format_input_for_html(char.timeline)}
       end
       
       # Custom fields will be in char_data[:custom]
